@@ -1,5 +1,0 @@
-@each $key, $val in $theme-colors {
-    .al-icon-#{$key} {
-        color: $val
-    }
-}

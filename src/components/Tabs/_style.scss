@@ -1,0 +1,53 @@
+.al-tabs {
+    .al-tabs-nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+        .al-tabs-bar {
+            display: block;
+            padding: $nav-link-padding-y $nav-link-padding-x;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                color: $nav-tabs-link-hover-color;
+            }
+            &.al-tabs-bar-disabled {
+                color: $nav-link-disabled-color;
+                pointer-events: none;
+                cursor: default;
+                background-color: transparent;
+                border-color: transparent;
+            }
+            &.al-tabs-bar-active {
+                color: $nav-tabs-link-active-color;
+            }
+            .al-icon {
+                margin-right: 8px;
+            }
+        } 
+    }
+    .al-tabs-content {
+        margin-top: $nav-tabs-content-margin;
+    }
+}
+
+.al-tabs-inline {
+    .al-tabs-bar-active {
+        border-bottom: $nav-tabs-border-width * 2 solid  $nav-tabs-link-active-color;
+    } 
+}
+
+.al-tabs-card {
+    .al-tabs-bar {
+        border: $nav-tabs-border-width solid transparent;
+        margin-bottom: -$nav-tabs-border-width;
+        &.al-tabs-bar-active  {
+            @include border-top-radius($nav-tabs-border-radius);
+            background-color: $nav-tabs-link-active-bg;
+            border-color: $nav-tabs-link-active-border-color;
+        }   
+    }  
+}
